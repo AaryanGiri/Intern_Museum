@@ -1,0 +1,245 @@
+{
+  "elapsedMilliseconds": 45,
+  "artObject": {
+    "links": {
+      "search": "http://www.rijksmuseum.nl/api/nl/collection"
+    },
+    "id": "nl-RP-F-00-5857",
+    "priref": "687776",
+    "objectNumber": "RP-F-00-5857",
+    "language": "nl",
+    "title": "Album met bezienswaardigheden in Londen",
+    "copyrightHolder": null,
+    "webImage": {
+      "guid": "cfba7aba-3cd6-481e-94b0-e20b20f4ca3b",
+      "offsetPercentageX": 50,
+      "offsetPercentageY": 50,
+      "width": 2500,
+      "height": 1854,
+      "url": "https://lh3.googleusercontent.com/DOsWZAAjR-fd4RynIU5bN6xQsTYF6vYkIvNiQb0Tp1w1nsIYx_six3aPoSnY4fO27vpqTCwP3YR8LYFs3wcP9rNqzG95MtcxnYQaPXVc=s0"
+    },
+    "colors": [],
+    "colorsWithNormalization": [],
+    "normalizedColors": [],
+    "normalized32Colors": [],
+    "materialsThesaurus": [],
+    "techniquesThesaurus": [],
+    "productionPlacesThesaurus": [],
+    "titles": [
+      "Album met bezienswaardigheden in Londen"
+    ],
+    "description": "Plakboek met 48 lichtdrukken van Londen. Vrijwel allemaal zijn ze uitgegeven door de London Stereoscopic and Photographic Company. Veertien lichtdrukken zijn ingeplakte prentbriefkaarten. Waarschijnlijk zijn de afdrukken ter plekke gekocht als souvenir.",
+    "labelText": null,
+    "objectTypes": [
+      "fotoalbum",
+      "plakboek"
+    ],
+    "objectCollection": [
+      "foto's"
+    ],
+    "makers": [
+      {
+        "name": "anoniem",
+        "unFixedName": "anoniem",
+        "placeOfBirth": null,
+        "dateOfBirth": null,
+        "dateOfBirthPrecision": null,
+        "dateOfDeath": null,
+        "dateOfDeathPrecision": null,
+        "placeOfDeath": null,
+        "occupation": [],
+        "roles": [
+          "clichémaker"
+        ],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [],
+        "qualification": null,
+        "labelDesc": "anoniem"
+      },
+      {
+        "name": "A. Lutkie Jr.",
+        "unFixedName": "Lutkie Jr., A.",
+        "placeOfBirth": null,
+        "dateOfBirth": null,
+        "dateOfBirthPrecision": null,
+        "dateOfDeath": null,
+        "dateOfDeathPrecision": null,
+        "placeOfDeath": null,
+        "occupation": [
+          "handelaar",
+          "boekhandelaar"
+        ],
+        "roles": [
+          "verkoper"
+        ],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [
+          "Rotterdam"
+        ],
+        "qualification": "vermeld op object",
+        "labelDesc": "vermeld op object A. Lutkie Jr., Rotterdam"
+      }
+    ],
+    "principalMakers": [
+      {
+        "name": "anoniem",
+        "unFixedName": "anoniem",
+        "placeOfBirth": null,
+        "dateOfBirth": null,
+        "dateOfBirthPrecision": null,
+        "dateOfDeath": null,
+        "dateOfDeathPrecision": null,
+        "placeOfDeath": null,
+        "occupation": [],
+        "roles": [
+          "fotograaf"
+        ],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [
+          "Londen"
+        ],
+        "qualification": null,
+        "labelDesc": "anoniem, Londen"
+      },
+      {
+        "name": "The London Stereoscopic and Photographic Company",
+        "unFixedName": "London Stereoscopic and Photographic Company, The",
+        "placeOfBirth": null,
+        "dateOfBirth": null,
+        "dateOfBirthPrecision": null,
+        "dateOfDeath": null,
+        "dateOfDeathPrecision": null,
+        "placeOfDeath": null,
+        "occupation": [
+          "uitgever"
+        ],
+        "roles": [
+          "uitgever"
+        ],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [
+          "Londen"
+        ],
+        "qualification": null,
+        "labelDesc": "The London Stereoscopic and Photographic Company, Londen"
+      }
+    ],
+    "plaqueDescriptionDutch": null,
+    "plaqueDescriptionEnglish": null,
+    "principalMaker": "anoniem",
+    "artistRole": null,
+    "associations": [],
+    "acquisition": {
+      "method": "schenking",
+      "date": "2017-01-01T00:00:00",
+      "creditLine": "Schenking van mevrouw L. Couvée-Jampoller, Amsterdam"
+    },
+    "exhibitions": [],
+    "materials": [
+      "papier",
+      "karton",
+      "textiel"
+    ],
+    "techniques": [
+      "lichtdruk",
+      "kleur op snee"
+    ],
+    "productionPlaces": [
+      "Londen",
+      "Londen",
+      "Rotterdam"
+    ],
+    "dating": {
+      "presentingDate": "ca. 1895 - ca. 1910",
+      "sortingDate": 1895,
+      "period": 19,
+      "yearEarly": 1895,
+      "yearLate": 1910
+    },
+    "classification": {
+      "iconClassIdentifier": [
+        "25I1",
+        "25I141"
+      ],
+      "iconClassDescription": [
+        "city-view in general; 'veduta'",
+        "street"
+      ],
+      "motifs": [],
+      "events": [],
+      "periods": [],
+      "places": [
+        "Londen"
+      ],
+      "people": [],
+      "objectNumbers": [
+        "RP-F-00-5857"
+      ]
+    },
+    "hasImage": true,
+    "historicalPersons": [],
+    "inscriptions": [],
+    "documentation": [],
+    "catRefRPK": [],
+    "principalOrFirstMaker": "anoniem, The London Stereoscopic and Photographic Company",
+    "dimensions": [
+      {
+        "unit": "mm",
+        "type": "hoogte",
+        "precision": null,
+        "part": "album",
+        "value": "240"
+      },
+      {
+        "unit": "mm",
+        "type": "breedte",
+        "precision": null,
+        "part": "album",
+        "value": "335"
+      },
+      {
+        "unit": "mm",
+        "type": "dikte",
+        "precision": null,
+        "part": "album",
+        "value": "33"
+      }
+    ],
+    "physicalProperties": [],
+    "physicalMedium": "oblong album met bladen van karton met kleur op snee; kaft van textiel, met gedrukte decoratie van een bos en twee vrouwen; schutbladen van sierpapier met een patroon van planten",
+    "longTitle": "Album met bezienswaardigheden in Londen, anoniem, The London Stereoscopic and Photographic Company, ca. 1895 - ca. 1910",
+    "subTitle": "h 240mm × b 335mm × d 33mm",
+    "scLabelLine": "anoniem, ca. 1895 - ca. 1910, oblong album met bladen van karton met kleur op snee; kaft van textiel, met gedrukte decoratie van een bos en twee vrouwen; schutbladen van sierpapier met een patroon van planten",
+    "label": {
+      "title": null,
+      "makerLine": null,
+      "description": null,
+      "notes": null,
+      "date": null
+    },
+    "showImage": true,
+    "location": null
+  },
+  "artObjectPage": {
+    "id": "nl-RP-F-00-5857",
+    "similarPages": [],
+    "lang": "nl",
+    "objectNumber": "RP-F-00-5857",
+    "tags": [],
+    "plaqueDescription": null,
+    "audioFile1": null,
+    "audioFileLabel1": null,
+    "audioFileLabel2": null,
+    "createdOn": "0001-01-01T00:00:00",
+    "updatedOn": "0001-01-01T00:00:00",
+    "adlibOverrides": {
+      "titel": null,
+      "maker": null,
+      "etiketText": null
+    }
+  }
+}
