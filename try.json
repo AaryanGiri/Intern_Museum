@@ -1,0 +1,42 @@
+    # URL = "https://www.rijksmuseum.nl/api/nl/collection"
+    #
+    # parameters = {
+    #     "key": os.getenv('Key'),
+    #     "q": "photograph"
+    # }
+    #
+    # # Send a GET request to the API endpoint with the specified parameters
+    # response = requests.get(url=URL, params=parameters)
+    #
+    # # Convert the response to JSON format
+    # data_json = response.json()
+    #
+    # # Extract the art objects from the JSON data
+    # art_objects = data_json["artObjects"]
+    #
+    # # Process each art object
+    # for art_object in art_objects:
+    #     object_number = art_object["objectNumber"]
+    #     URL_Object = f"https://www.rijksmuseum.nl/api/nl/collection/{object_number}?key={os.getenv('Key')}"
+    #
+    #     # Send a GET request to the individual art object URL
+    #     response_object = requests.get(url=URL_Object)
+    #     response_object_json = response_object.json()
+    #
+    #     # Check if the art object has a web image
+    #     if art_object["webImage"] is None:
+    #         # Skip processing if no web image is available
+    #         continue
+    #     else:
+    #         img_url = art_object["webImage"]["url"]
+    #
+    #     title = art_object["title"]
+    #     long_title = art_object["longTitle"]
+    #
+    #     filename = title + ".jpg"
+    #
+    #     # Download the image from the provided URL
+    #     download_image(img_url, filename)
+    #
+    #     # Write the long title into the downloaded image
+    #     writeTitleIntoImage(filename, long_title)

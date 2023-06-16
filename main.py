@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 import requests
 import os
 from dotenv import load_dotenv
+import json
 
 
 def configure():
@@ -40,7 +41,7 @@ def writeTitleIntoImage(file, text):
 
     # Calculate the coordinates for the text and the rectangle background
     text_x = 10
-    text_y = img_height - total_height - 200
+    text_y = img_height - total_height - 15
     rectangle_coords = [(text_x - 10, text_y - 5), (text_x + max_width + 10, text_y + total_height + 20)]
 
     # Draw the white rectangle background
@@ -71,49 +72,52 @@ def download_image(url, file_path):
 def main():
     configure()
 
-    # Set the URL for the API endpoint
-    URL = "https://www.rijksmuseum.nl/api/nl/collection"
+    category = input("What kind of art or category are you interested in exploring at the museum?\n")
 
-    parameters = {
-        "key": os.getenv('Key'),
-        "q": "photograph"
-    }
+    req = requests.get(f"https://api.vam.ac.uk/v2/objects/search?q={category}")
+    response = req.json()
+    data_res = json.dumps(response['records'])
+    # print(json.dumps(response['records'], indent=2))
 
-    # Send a GET request to the API endpoint with the specified parameters
-    response = requests.get(url=URL, params=parameters)
+    data = json.loads(data_res)
 
-    # Convert the response to JSON format
-    data_json = response.json()
+    iiif_presentation_urls = []
+    img_sequences = []
 
-    # Extract the art objects from the JSON data
-    art_objects = data_json["artObjects"]
+    for item in data:
+        if "_iiif_presentation_url" in item["_images"]:
+            iiif_presentation_urls.append(item["_images"]["_iiif_presentation_url"])
 
-    # Process each art object
-    for art_object in art_objects:
-        object_number = art_object["objectNumber"]
-        URL_Object = f"https://www.rijksmuseum.nl/api/nl/collection/{object_number}?key={os.getenv('Key')}"
+    # print(iiif_presentation_urls)
 
-        # Send a GET request to the individual art object URL
-        response_object = requests.get(url=URL_Object)
-        response_object_json = response_object.json()
-
-        # Check if the art object has a web image
-        if art_object["webImage"] is None:
-            # Skip processing if no web image is available
+    for iiif_presentation_url in iiif_presentation_urls:
+        canvases = []
+        if iiif_presentation_url is None:
             continue
         else:
-            img_url = art_object["webImage"]["url"]
+            url_req = requests.get(url=iiif_presentation_url)
+            # print(iiif_presentation_url)
+            url_response = url_req.json()
+            url_res = json.dumps(url_response)
 
-        title = art_object["title"]
-        long_title = art_object["longTitle"]
+            url_data = json.loads(url_res)
+            text_on_image = url_data["description"]
+            label_1 = url_data["label"]
 
-        filename = title + ".jpg"
+            img_sequence = url_data["sequences"][0]
+            canvases = img_sequence["canvases"]
+            for canvas in canvases:
+                label_2 = canvas["label"]
+                image = canvas["images"][0]
+                url_img = image["resource"]["@id"]
 
-        # Download the image from the provided URL
-        download_image(img_url, filename)
+                filename = label_1 + " " + label_2 + ".jpg"
 
-        # Write the long title into the downloaded image
-        writeTitleIntoImage(filename, long_title)
+                # Download the image from the provided URL
+                download_image(url_img, filename)
+
+                # Write the long title into the downloaded image
+                writeTitleIntoImage(filename, text_on_image)
 
 
 main()
