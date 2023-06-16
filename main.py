@@ -74,7 +74,8 @@ def main(category):
     data = json.loads(data_res)
 
     iiif_presentation_urls = []
-    img_sequences = []
+    filenames = []
+    j=0
 
     for item in data:
         if "_iiif_presentation_url" in item["_images"]:
@@ -103,7 +104,12 @@ def main(category):
                 image = canvas["images"][0]
                 url_img = image["resource"]["@id"]
 
-                filename = label_1 + " " + label_2 + ".jpg"
+                if label_1 + " " + label_2 + ".jpg" in filenames:
+                    filename = label_1 + " " + label_2 + str(j) + ".jpg"
+                    j += 1
+                else:
+                    filename = label_1 + " " + label_2 + ".jpg"
+                    filenames.append(label_1 + " " + label_2 + ".jpg")
 
                 # Download the image from the provided URL
                 download_image(url_img, filename)
