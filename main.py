@@ -1,12 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import requests
-import os
-from dotenv import load_dotenv
 import json
-
-
-def configure():
-    load_dotenv()
+import argparse
 
 
 def writeTitleIntoImage(file, text):
@@ -69,10 +64,7 @@ def download_image(url, file_path):
         print("Failed to download image. Status code:", response_img.status_code)
 
 
-def main():
-    configure()
-
-    category = input("What kind of art or category are you interested in exploring at the museum?\n")
+def main(category):
 
     req = requests.get(f"https://api.vam.ac.uk/v2/objects/search?q={category}")
     response = req.json()
@@ -120,4 +112,13 @@ def main():
                 writeTitleIntoImage(filename, text_on_image)
 
 
-main()
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Museum Art Explorer')
+    parser.add_argument('category', type=str, help='Category of art to explore in the museum')
+    args = parser.parse_args()
+
+    main(args.category)
+
+
+# To run this code type "python main.py <category>" in your terminal.
+# category = Is type of art to explore in the museum.
